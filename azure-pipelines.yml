@@ -17,7 +17,7 @@ steps:
 
 - script: |
     npm install
-    npm run build --destination $(Build.ArtifactStagingDirectory)
+    react-scripts build && mv drop $(Build.ArtifactStagingDirectory)
   displayName: 'npm install and build'
 
 - task: PublishBuildArtifacts@1
